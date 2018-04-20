@@ -5,6 +5,8 @@
 <meta name="keywords" content="website keywords, website keywords">
 <meta http-equiv="content-type" content="text/html; charset=windows-1252">
 <link rel="stylesheet" type="text/css" href="style/style.css" title="style">
+
+<link rel="import" href="/js/sidebar.html">
 </head>
 <body>
 <div id="main">
@@ -27,7 +29,15 @@
 </div>
 </div>
 <div id="site_content">
-<script src="js/sidebar.js"></script>
+<script>
+    var link = document.querySelector('link[rel="import"]');
+    var content = link.import;
+
+    // Grab DOM from warning.html's document.
+    var el = content.querySelector('.warning');
+
+    document.body.appendChild(el.cloneNode(true));
+</script>
 <div id="content"><!-- insert the page content here -->
 <h1>Mind the mess!</h1>
 Still a work in progress, gah
