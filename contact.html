@@ -7,6 +7,7 @@
 			<meta name="keywords" content="website keywords, website keywords">
 				<meta http-equiv="content-type" content="text/html; charset=windows-1252">
 					<link rel="stylesheet" type="text/css" href="style/style.css" title="style">
+					<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 					</head>
 					<body>
 						<div id="main">
@@ -45,42 +46,11 @@
 								</div>
 							</div>
 							<div id="site_content">
-								<div class="sidebar">
-									<!-- insert your sidebar items here -->
-									<h3>Latest News</h3>
-									<h4>No new news</h4>
-									<h5>April 5th, 2018</h5>
-									<p>Today is today<br>
-											<a href="index.html#">Read more</a>
-										</p>
-										<p/>
-										<h4>New Website Launched</h4>
-										<h5>Arpil 4th, 2018</h5>
-										<p>Discovered an excelent website template, will be fleshing it out and adding to it as time goes on.<br>
-												<a href="index.html#">Read more</a>
-											</p>
-											<h3>Useful Links</h3>
-											<ul>
-												<li>
-													<a href="index.html#">Steam</a>
-												</li>
-												<li>
-													<a href="index.html#">Github</a>
-												</li>
-												<li>
-													<a href="index.html#">My Discord Server</a>
-												</li>
-												<li>
-													<a href="index.html#">George Brown's Website</a>
-												</li>
-											</ul>
-											<form method="post" action="#" id="search_form">
-												<p>
-													<input class="search" name="search_field" value="Enter keywords....." type="text">
-														<input name="search" style="border: 0pt none ; margin: 0pt 0pt -9px 5px;" src="style/search.png" alt="Search" title="Search" type="image">
-														</p>
-													</form>
-												</div>
+								<div id="sidebar"></div>
+									<script>
+									$( "#sidebar" ).load( "resources/sidebar.html #sidebar" );
+									</script>
+										<div id="content">
 												<div id="content">
 													<!-- insert the page content here -->
 													<h1>Contact Me</h1>

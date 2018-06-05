@@ -7,9 +7,7 @@
 			<meta name="keywords" content="website keywords, website keywords">
 				<meta http-equiv="content-type" content="text/html; charset=windows-1252">
 					<link rel="stylesheet" type="text/css" href="style/style.css" title="style">
-
-						<link rel="import" href="/js/sidebar.html">
-						include ./js/sidebar.jade
+						<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 						</head>
 						<body>
 							<div id="main">
@@ -48,24 +46,24 @@
 									</div>
 								</div>
 								<div id="site_content">
-								<canvas id="sidebar" width="200" height="600">
-								This text is displayed if your browser does not support HTML5 Canvas.
-								</canvas>
-									<script type='text/javascript' src='js/sidebar.js'></script>
-									<div id="content">
-										<!-- insert the page content here -->
-										<h1>Mind the mess!</h1>
-										Still a work in progress, gah
-										<h2>Compatibility</h2>
-										<p>This website has been tested in the following browsers:</p>
-										<ul>
-											<li>Internet Explorer 8</li>
-											<li>Internet Explorer 7</li>
-											<li>FireFox 3.5</li>
-											<li>Google Chrome 6</li>
-										</ul>
+									<div id="sidebar"></div>
+									<script>
+									$( "#sidebar" ).load( "resources/sidebar.html #sidebar" );
+									</script>
+										<div id="content">
+											<!-- insert the page content here -->
+											<h1>Mind the mess!</h1>
+											Still a work in progress, gah
+											<h2>Compatibility</h2>
+											<p>This website has been tested in the following browsers:</p>
+											<ul>
+												<li>Internet Explorer 8</li>
+												<li>Internet Explorer 7</li>
+												<li>FireFox 3.5</li>
+												<li>Google Chrome 6</li>
+											</ul>
+										</div>
 									</div>
-								</div>
 								<div id="footer"> Copyright © textured_industrial | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a>
 								</div>
 							</div>
